@@ -35,13 +35,13 @@ export class LoginComponent {
       if (enteredUsername === this.staticCredentials.username && enteredPassword === this.staticCredentials.password) {
         // Navigate to the dashboard on successful login
         this.router.navigate(['/dashboard']);
-
+        console.log("sam : ", this.loginForm.value)
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Successful login now you are moving to dashhboard",
+          title: "Successful login, now you are moving to dashhboard",
           showConfirmButton: false,
-          timer: 1500
+          timer: 300
         });
       } else {
         this.error = 'Invalid username or password';

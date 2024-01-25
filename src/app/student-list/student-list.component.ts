@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent {
-  title = 'dataTableDemo';
-  dtOptions: any = {}; 
+  
  
   posts: any;
  
@@ -20,11 +19,5 @@ export class StudentListComponent {
     }, error => console.error(error));
   }
  
-  ngOnInit(): void {
-    this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 5,
-      processing: true
-    };
-  }
+
 }

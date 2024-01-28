@@ -26,6 +26,14 @@ export class LoginComponent {
       password: ['', Validators.required],
     });
   }
+
+  togglePasswordVisibility() {
+    const passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
+    const showPasswordCheckbox = document.getElementById('showPassword') as HTMLInputElement;
+
+    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+  }
+
   loginUser() {
     if (this.loginForm.valid) {
       const enteredUsername = this.loginForm.get('username')!.value;
@@ -47,7 +55,7 @@ export class LoginComponent {
         this.error = 'Invalid username or password';
         Swal.fire({
           icon: "error",
-          title: "Oops...",
+          title: "Error...",
           text: "Invalid username or password!",
           //footer: '<a href="#">Why do I have this issue?</a>'
         });

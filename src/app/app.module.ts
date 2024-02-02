@@ -14,6 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { DataTablesModule } from 'angular-datatables';
+import { AddVacancyComponent } from './add-vacancy/add-vacancy.component';
+import { AddCandidateComponent } from './add-candidate/add-candidate.component';
+import { AddUniversityComponent } from './add-university/add-university.component';
+import { ListCandidateComponent } from './list-candidate/list-candidate.component';
+import { ListVacancyComponent } from './list-vacancy/list-vacancy.component';
+import { ListUniversityComponent } from './list-university/list-university.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { DataTablesModule } from 'angular-datatables';
     SideMenuComponent,
     HeaderComponent,
     StudentListComponent,
-    TeacherListComponent
+    TeacherListComponent,
+    AddVacancyComponent,
+    AddCandidateComponent,
+    AddUniversityComponent,
+    ListCandidateComponent,
+    ListVacancyComponent,
+    ListUniversityComponent
 
   ],
   imports: [

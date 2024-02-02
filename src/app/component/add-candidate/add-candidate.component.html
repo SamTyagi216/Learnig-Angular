@@ -1,0 +1,109 @@
+<section id="wrapper">
+    <div class="login-register">
+        <div class="login-box card">
+            <div class="card-body d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="text-center bg-light">Add-Candidate</h1>
+                        <div class="col-md-12">
+
+                            <form [formGroup]="candidateForm" (ngSubmit)="onSubmit(candidateForm.value)">
+                                <div>
+                                    <label for="candidateName">Candidate Name</label>
+                                    <input type="text" id="candidateName" formControlName="candidateName">
+                                </div>
+                                <div>
+                                    <label for="gender">Gender</label>
+                                    <select class="form-control" id="gender" formControlName="gender">
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+
+                                <div>
+                                    <label for="profilePictureURL">Profile Picture URL</label>
+                                    <input type="text" id="profilePictureURL" formControlName="profilePictureURL">
+                                </div>
+
+                                <div>
+                                    <label for="currentDesignation">Current Designation</label>
+                                    <input type="text" id="currentDesignation" formControlName="currentDesignation">
+                                </div>
+
+                                <div>
+                                    <label for="currentEmployer">Current Employer</label>
+                                    <input type="text" id="currentEmployer" formControlName="currentEmployer">
+                                </div>
+
+                                <div>
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" formControlName="address">
+                                </div>
+
+                                <div>
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" formControlName="state">
+                                </div>
+
+                                <div>
+                                    <label for="currentExperienceInYears">Current Experience (Years)</label>
+                                    <input type="number" id="currentExperienceInYears"
+                                        formControlName="currentExperienceInYears">
+                                </div>
+
+                                <div>
+                                    <label for="currentExperienceInMonths">Current Experience (Months)</label>
+                                    <input type="number" id="currentExperienceInMonths"
+                                        formControlName="currentExperienceInMonths">
+                                </div>
+
+                                <div>
+                                    <label for="currentCTCInLacks">Current CTC (in Lacks)</label>
+                                    <input type="text" id="currentCTCInLacks" formControlName="currentCTCInLacks">
+                                </div>
+
+                                <div>
+                                    <label for="expectedCTCInLacks">Expected CTC (in Lacks)</label>
+                                    <input type="text" id="expectedCTCInLacks" formControlName="expectedCTCInLacks">
+                                </div>
+
+                                <div>
+                                    <label for="contactNumber">Contact Number</label>
+                                    <input type="text" id="contactNumber" formControlName="contactNumber">
+                                </div>
+
+                                <div>
+                                    <label for="emailId">Email ID</label>
+                                    <input type="email" id="emailId" formControlName="emailId">
+                                </div>
+
+                                <div>
+                                    <label for="noticePeriodInDays">Notice Period (in Days)</label>
+                                    <input type="number" id="noticePeriodInDays" formControlName="noticePeriodInDays">
+                                </div>
+
+                                <div>
+                                    <label for="skills">Skills</label>
+                                    <input type="text" id="skills" formControlName="skills">
+                                </div>
+
+                                <div>
+                                    <label for="highestEducation">Highest Education</label>
+                                    <input type="text" id="highestEducation" formControlName="highestEducation">
+                                </div>
+
+                                <div>
+                                    <button class="text-center" type="submit">Submit</button>
+                                    <!-- <button type="submit" [disabled]="!candidateForm.valid">Submit</button> -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,48 @@
+<div class="table-container py-5">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <!-- <th>Created At</th>
+                <th>Last Modified At</th> -->
+                <th>Company Name</th>
+                <th>Job Profile</th>
+                <th>Minimum Experience Required</th>
+                <th>Maximum Experience Required</th>
+                <th>Minimum Budget For Position</th>
+                <th>Maximum Budget For Position</th>
+                <th>Job Vacancy Subject</th>
+                <th>Job Description</th>
+                <th>Job Location</th>
+                <th>Work From</th>
+                <th>Job Status</th>
+                <th>Created At</th>
+                <th>Last Modified At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let jobDetail of jobDetailsList ">
+                <!-- <td>{{ jobDetail.createdAt }}</td>
+                <td>{{ jobDetail.lastModifiedAt }}</td> -->
+                <td>{{ jobDetail.companyName }}</td>
+                <td>{{ jobDetail.jobProfile }}</td>
+                <td>{{ jobDetail.mininumExperienceRequired }}</td>
+                <td>{{ jobDetail.maximumExperienceRequired }}</td>
+                <td>{{ jobDetail.minimumBudgetForPosition }}</td>
+                <td>{{ jobDetail.maximumBudgetForPosition }}</td>
+                <td>{{ jobDetail.jobVacancySubject }}</td>
+                <td>{{ jobDetail.jobDescription }}</td>
+                <td>{{ jobDetail.jobLocation }}</td>
+                <td>{{ jobDetail.workFrom }}</td>
+                <td>{{ jobDetail.jobStatus }}</td>
+                <td>{{ jobDetail.createdAt }}</td>
+                <td>{{ jobDetail.lastModifiedAt }}</td>
+                <td> <a href="javascript:void(0)" title="Edit" (click)="goToEdit(jobDetail)"
+                        class="btn btn-link text-info"><i class="fa fa-edit"></i></a>
+                    <a href="javascript:void(0)" title="Delete" class="btn btn-link btn-pirmary"><i
+                            class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,106 @@
+<section id="wrapper" class=" bg-light">
+    <div class="container">
+        <div class="login-register  ">
+            <h2 class=" bg-light  py-1">Add Vacancy Form</h2>
+            <div class="text-right">
+
+                <button (click)="logout()" class="btn btn-danger"><i class="fa fa-power-off"></i> </button>
+            </div>
+        </div>
+        <div class="login-box card  bg-info  ">
+            <div class="card-body">
+                <form [formGroup]="jobForm" (ngSubmit)="onSubmit(jobForm.value)">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input formControlName="companyName" id="companyName" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jobProfile">Job Profile</label>
+                                <input formControlName="jobProfile" id="jobProfile" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="mininumExperienceRequired">Min Experience Required</label>
+                                <input formControlName="mininumExperienceRequired" id="mininumExperienceRequired"
+                                    class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="maximumExperienceRequired">Max Experience Required</label>
+                                <input formControlName="maximumExperienceRequired" id="maximumExperienceRequired"
+                                    class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="minimumBudgetForPosition">Minimum Budget For Position</label>
+                                <input formControlName="minimumBudgetForPosition" id="minimumBudgetForPosition"
+                                    class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="maximumBudgetForPosition">Maximum Budget For Position</label>
+                                <input formControlName="maximumBudgetForPosition" id="maximumBudgetForPosition"
+                                    class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jobVacancySubject">Job Vacancy Subject</label>
+                                <input formControlName="jobVacancySubject" id="jobVacancySubject" class="form-control"
+                                    type="text">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jobLocation">Job Location</label>
+                                <input formControlName="jobLocation" id="jobLocation" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="workFrom">Work From</label>
+                                <input formControlName="workFrom" id="workFrom" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jobStatus">Job Status</label>
+                                <select formControlName="jobStatus" id="jobStatus" class="form-control">
+                                    <option value="ACTIVE">Active</option>
+                                    <option value="INACTIVE">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jobDescription">Job Description</label>
+                                <textarea style="height: 50px; width: 705px;" formControlName="jobDescription"
+                                    id="jobDescription" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -14,12 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { DataTablesModule } from 'angular-datatables';
-import { AddVacancyComponent } from './common/add-vacancy/add-vacancy.component';
-import { AddCandidateComponent } from './common/add-candidate/add-candidate.component';
-import { AddUniversityComponent } from './common/add-university/add-university.component';
-import { ListCandidateComponent } from './common/list-candidate/list-candidate.component';
-import { ListVacancyComponent } from './common/list-vacancy/list-vacancy.component';
-import { ListUniversityComponent } from './common/list-university/list-university.component';
+import { AddVacancyComponent } from './component/add-vacancy/add-vacancy.component';
+import { AddCandidateComponent } from './component/add-candidate/add-candidate.component';
+import { AddUniversityComponent } from './component/add-university/add-university.component';
+import { ListCandidateComponent } from './component/list-candidate/list-candidate.component';
+import { ListVacancyComponent } from './component/list-vacancy/list-vacancy.component';
+import { ListUniversityComponent } from './component/list-university/list-university.component';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,34 @@
+/* table.component.css */
+
+/* Custom styles for table container */
+.table-container {
+    width: 90%;
+    /* Set table container width to 90% of the screen */
+    margin: 0 auto;
+    /* Center-align the table */
+}
+
+/* Custom styles for the table */
+.custom-table {
+    width: 100%;
+    /* Set table width to 100% of its container */
+    border-collapse: collapse;
+    /* Collapse table borders */
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ddd;
+    /* Add border to table cells */
+    padding: 8px;
+    /* Set padding for table cells */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    /* Background color for table headers */
+    font-weight: bold;
+    /* Bold font for table headers */
+}

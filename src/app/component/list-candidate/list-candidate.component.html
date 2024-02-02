@@ -1,0 +1,51 @@
+<div class="table-container py-5">
+    <h2>Candidate Details List</h2>
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Created At</th>
+                <th>Last Modified At</th>
+                <th>Candidate Name</th>
+                <th>Gender</th>
+                <th>Profile Picture URL</th>
+                <th>Current Designation</th>
+                <th>Current Employer</th>
+                <th>Address</th>
+                <th>State</th>
+                <th>Current Experience (Years)</th>
+                <th>Current Experience (Months)</th>
+                <th>Current CTC (Lacks)</th>
+                <th>Expected CTC (Lacks)</th>
+                <th>Contact Number</th>
+                <th>Email ID</th>
+                <th>Notice Period (Days)</th>
+                <th>Skills</th>
+                <th>Highest Education</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let candidate of candidateDetailsResponse">
+                <td>{{ candidate.id }}</td>
+                <td>{{ candidate.createdAt }}</td>
+                <td>{{ candidate.lastModifiedAt }}</td>
+                <td>{{ candidate.candidateName }}</td>
+                <td>{{ candidate.gender }}</td>
+                <td>{{ candidate.profilePictureURL }}</td>
+                <td>{{ candidate.currentDesignation }}</td>
+                <td>{{ candidate.currentEmployer }}</td>
+                <td>{{ candidate.address }}</td>
+                <td>{{ candidate.state }}</td>
+                <td>{{ candidate.currentExperienceInYears }}</td>
+                <td>{{ candidate.currentExperienceInMonths }}</td>
+                <td>{{ candidate.currentCTCInLacks }}</td>
+                <td>{{ candidate.expectedCTCInLacks }}</td>
+                <td>{{ candidate.contactNumber }}</td>
+                <td>{{ candidate.emailId }}</td>
+                <td>{{ candidate.noticePeriodInDays }}</td>
+                <td>{{ candidate.skills }}</td>
+                <td>{{ candidate.highestEducation }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

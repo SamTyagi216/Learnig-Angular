@@ -1,0 +1,37 @@
+<div class="table-container py-5">
+    <table class="custom-table">
+        <!-- Table headers -->
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Created At</th>
+                <th>Last Modified At</th>
+                <th>University Name</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Pincode</th>
+                <th>Contact Person Name</th>
+                <th>Contact Number</th>
+                <th>Email ID</th>
+                <th>Logo URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contentItem of universityDetailsList">
+                <td>{{ contentItem.id }}</td>
+                <td>{{ contentItem.createdAt }}</td>
+                <td>{{ contentItem.lastModifiedAt }}</td>
+                <td>{{ contentItem.universityName }}</td>
+                <td>{{ contentItem.district }}</td>
+                <td>{{ contentItem.state }}</td>
+                <td>{{ contentItem.country }}</td>
+                <td>{{ contentItem.pincode }}</td>
+                <td>{{ contentItem.universityContactPersonName }}</td>
+                <td>{{ contentItem.contactNumber }}</td>
+                <td>{{ contentItem.emailId }}</td>
+                <td>{{ contentItem.logoURL }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

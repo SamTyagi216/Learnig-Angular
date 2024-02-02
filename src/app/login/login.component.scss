@@ -1,294 +1,293 @@
- 
-.login-center {
-    padding: 1.42857em 4.28571em;
-    background: white;
-    margin-top: 1.42857em;
-    margin-bottom: 1.42857em;
-    border-radius: 5px;
-    position: relative;
-  }
-  
-  ::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #000;
-    opacity: 1;
-    /* Firefox */
-  }
-  
-  :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #000;
-  }
-  
-  ::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #000;
-  }
-  
-  .form-group {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .form-group input {
-    width: 100%;
-  }
-  
-  .encPass {
-    position: absolute;
-    right: 10px;
-    top: 38px;
-    color: #0B4DA2;
-    cursor: pointer;
-  }
-  
-  .form-material .form-group>label {
-    top: -30%;
-  }
-  
-  .login_container {
-    /*padding: 50px 0;*/
-    background: #fff;
-    min-height: 100vh;
-  }
-  
-  .login_container {
-    /*  display: flex;
+ .login-center {
+   padding: 1.42857em 4.28571em;
+   background: white;
+   margin-top: 1.42857em;
+   margin-bottom: 1.42857em;
+   border-radius: 5px;
+   position: relative;
+ }
+
+ ::placeholder {
+   /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: #000;
+   opacity: 1;
+   /* Firefox */
+ }
+
+ :-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color: #000;
+ }
+
+ ::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: #000;
+ }
+
+ .form-group {
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+ .form-group input {
+   width: 100%;
+ }
+
+ .encPass {
+   position: absolute;
+   right: 10px;
+   top: 38px;
+   color: #0B4DA2;
+   cursor: pointer;
+ }
+
+ .form-material .form-group>label {
+   top: -30%;
+ }
+
+ .login_container {
+   /*padding: 50px 0;*/
+   background: #fff;
+   min-height: 100vh;
+ }
+
+ .login_container {
+   /*  display: flex;
     align-items: center;*/
-  }
-  
-  .login_container .row {
-    align-items: center;
-    display: flex;
-  }
-  
-  .login_text h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #191717;
-  }
-  
-  .login_text p {
-    margin-bottom: 40px;
-  }
-  
-  .login_container .form {
-    max-width: 70%;
-  }
-  
-  .loginForm_banner {
-    position: relative;
-    min-height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .loginForm_banner:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #F8F8F8;
-  }
-  
-  .login_container .container {}
-  
-  .loginForm_banner img {
-    position: relative;
-    z-index: 99;
-    max-width: 400px;
-  }
-  
-  // .login_container label{
-  //   color: rgba(0, 0, 0, 0.7);
-  //   margin-bottom: 5px;
-  //   position: static;
-  //   opacity: 1;
-  //   transform: none;
-  //   font-size: 14px;
-  //     font-weight: 400;
-  // }
-  .login_top {
-    background: #F8F8F8;
-    position: relative;
-    z-index: 9999;
-  }
-  
-  .login_white {
-    background: #fff;
-    padding: 25px 0;
-  }
-  
-  .loginbtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 55px;
-    width: 100%;
-  }
-  
-  // .loginbtn button{
-  //       width: 200px;
-  //     box-shadow: none;
-  //     border: 0;
-  //     height: 50px;
-  //     font-weight: bold;
-  //     font-size: 16px;
-  // } 
-  .checkbox.checkbox-info span {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  .forgot_text {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 14px;
-    text-decoration: underline;
-    font-weight: 600;
-  }
-  
-  .login_container input {
-    height: 40px;
-    background: #f5f5f5;
-    border-radius: 12px;
-    padding: 0.5rem;
-    border: 1px solid #ced4da;
-    transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s;
-  }
-  
-  .loginbtn button {
-    width: 168px;
-    box-shadow: none;
-    border: 0;
-    height: 50px;
-    font-weight: bold;
-    font-size: 16px !important;
-    color: #fff;
-    background-color: #0b4da2;
-    border-color: #0b4da2;
-    border-radius: 26px;
-  }
-  
-  .checkbox input[type=checkbox] {
-    height: 20px;
-    width: auto;
-    vertical-align: middle;
-  }
-  
-  .checkbox input[type=checkbox] {
-    height: 20px;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .login_container .form {
-      max-width: 100%;
-    }
-  
-    .login_top {
-      background: #fff;
-      position: relative;
-      z-index: 9999;
-      padding-top: 16px;
-    }
-  }
-  
-  input:focus-visible,
-  input:focus {
-    // border-color: red !important;
-    outline: 0;
-  }
-  
-  label.floating-label {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 13px;
-    top: -8px;
-    display: block;
-    z-index: 1;
-    position: absolute;
-    left: 10px;
-    color: #8d8b8b;
-    padding: 0 5px;
-    background: #fff;
-    pointer-events: none;
-    transition: all 0.1s ease;
-  }
-  
-  .form-floating-lable .form-group {
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  .form-floating-lable input,
-  .form-floating-lable select {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.4375em;
-    color: rgba(0, 0, 0, 0.87);
-    box-sizing: border-box;
-    cursor: text;
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    height: 39px !important;
-    background: #fff !important;
-    border-radius: 30px !important;
-    border: 1px solid rgb(204, 204, 204);
-  
-  }
-  
-  label.floating-label-select {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    z-index: 1;
-    top: -9px;
-    pointer-events: auto;
-    user-select: none;
-    position: absolute;
-    left: 10px;
-    color: #8d8b8b;
-    padding: 0 5px;
-    background: #fff;
-  }
-  
-  .noPadding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  hr {
-    border-top: 1px solid #ccc !important;
-  }
-  
-  .passwordShow {
-    position: absolute;
-    right: 11px;
-    bottom: 8px;
-    border-radius: 25px;
-  }
-  
-  .errorHiglight {
-    border: 1px solid red !important;
-  }
-  
-  @media only screen and (max-width: 992px) {
-    .login_container .row {
-      display: block;
-    }
-  
-    .loginForm_banner {
-      height: auto;
-    }
-  }
-=======
-margin-left {
-    margin: 10px;
-} 
+ }
+
+ .login_container .row {
+   align-items: center;
+   display: flex;
+ }
+
+ .login_text h2 {
+   font-size: 22px;
+   font-weight: bold;
+   margin-bottom: 5px;
+   color: #191717;
+ }
+
+ .login_text p {
+   margin-bottom: 40px;
+ }
+
+ .login_container .form {
+   max-width: 70%;
+ }
+
+ .loginForm_banner {
+   position: relative;
+   min-height: 92vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .loginForm_banner:after {
+   content: '';
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: #F8F8F8;
+ }
+
+ .login_container .container {}
+
+ .loginForm_banner img {
+   position: relative;
+   z-index: 99;
+   max-width: 400px;
+ }
+
+ // .login_container label{
+ //   color: rgba(0, 0, 0, 0.7);
+ //   margin-bottom: 5px;
+ //   position: static;
+ //   opacity: 1;
+ //   transform: none;
+ //   font-size: 14px;
+ //     font-weight: 400;
+ // }
+ .login_top {
+   background: #F8F8F8;
+   position: relative;
+   z-index: 9999;
+ }
+
+ .login_white {
+   background: #fff;
+   padding: 25px 0;
+ }
+
+ .loginbtn {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 55px;
+   width: 100%;
+ }
+
+ // .loginbtn button{
+ //       width: 200px;
+ //     box-shadow: none;
+ //     border: 0;
+ //     height: 50px;
+ //     font-weight: bold;
+ //     font-size: 16px;
+ // } 
+ .checkbox.checkbox-info span {
+   color: rgba(0, 0, 0, 0.7);
+   font-size: 14px;
+   font-weight: 600;
+ }
+
+ .forgot_text {
+   color: rgba(0, 0, 0, 0.7);
+   font-size: 14px;
+   text-decoration: underline;
+   font-weight: 600;
+ }
+
+ .login_container input {
+   height: 40px;
+   background: #f5f5f5;
+   border-radius: 12px;
+   padding: 0.5rem;
+   border: 1px solid #ced4da;
+   transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+ }
+
+ .loginbtn button {
+   width: 168px;
+   box-shadow: none;
+   border: 0;
+   height: 50px;
+   font-weight: bold;
+   font-size: 16px !important;
+   color: #fff;
+   background-color: #0b4da2;
+   border-color: #0b4da2;
+   border-radius: 26px;
+ }
+
+ .checkbox input[type=checkbox] {
+   height: 20px;
+   width: auto;
+   vertical-align: middle;
+ }
+
+ .checkbox input[type=checkbox] {
+   height: 20px;
+ }
+
+ @media screen and (max-width: 767px) {
+   .login_container .form {
+     max-width: 100%;
+   }
+
+   .login_top {
+     background: #fff;
+     position: relative;
+     z-index: 9999;
+     padding-top: 16px;
+   }
+ }
+
+ input:focus-visible,
+ input:focus {
+   // border-color: red !important;
+   outline: 0;
+ }
+
+ label.floating-label {
+   font-weight: 400;
+   font-size: 13px;
+   line-height: 13px;
+   top: -8px;
+   display: block;
+   z-index: 1;
+   position: absolute;
+   left: 10px;
+   color: #8d8b8b;
+   padding: 0 5px;
+   background: #fff;
+   pointer-events: none;
+   transition: all 0.1s ease;
+ }
+
+ .form-floating-lable .form-group {
+   position: relative;
+   margin-bottom: 20px;
+ }
+
+ .form-floating-lable input,
+ .form-floating-lable select {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 1.4375em;
+   color: rgba(0, 0, 0, 0.87);
+   box-sizing: border-box;
+   cursor: text;
+   display: inline-flex;
+   align-items: center;
+   width: 100%;
+   position: relative;
+   border-radius: 10px;
+   height: 39px !important;
+   background: #fff !important;
+   border-radius: 30px !important;
+   border: 1px solid rgb(204, 204, 204);
+
+ }
+
+ label.floating-label-select {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 15px;
+   z-index: 1;
+   top: -9px;
+   pointer-events: auto;
+   user-select: none;
+   position: absolute;
+   left: 10px;
+   color: #8d8b8b;
+   padding: 0 5px;
+   background: #fff;
+ }
+
+ .noPadding {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+ }
+
+ hr {
+   border-top: 1px solid #ccc !important;
+ }
+
+ .passwordShow {
+   position: absolute;
+   right: 11px;
+   bottom: 8px;
+   border-radius: 25px;
+ }
+
+ .errorHiglight {
+   border: 1px solid red !important;
+ }
+
+ @media only screen and (max-width: 992px) {
+   .login_container .row {
+     display: block;
+   }
+
+   .loginForm_banner {
+     height: auto;
+   }
+ }
+
+ margin-left {
+   margin: 10px;
+ }

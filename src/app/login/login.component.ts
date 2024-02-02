@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -18,7 +18,7 @@ export class LoginComponent {
     password: 'sam'
   };
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private router: Router, private el: ElementRef, private renderer: Renderer2,) { }
 
   ngOnInit() {
     this.loginForm = this.fb.group({
@@ -52,6 +52,19 @@ export class LoginComponent {
           //footer: '<a href="#">Why do I have this issue?</a>'
         });
       }
+    }
+  }
+  
+  onClick() {
+    const passwordInput = this.el.nativeElement.querySelector('#password');
+    const passwordToggle = this.el.nativeElement.querySelector('#password-toggle');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      this.renderer.addClass(passwordToggle, 'fa-eye-slash');
+    } else {
+      passwordInput.type = 'password';
+      this.renderer.removeClass(passwordToggle, 'fa-eye-slash');
     }
   }
 

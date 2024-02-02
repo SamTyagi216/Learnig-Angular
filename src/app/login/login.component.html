@@ -21,9 +21,19 @@
                             </div>
                             <div class="form-group form-primary">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" formControlName="password">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" formControlName="password"
+                                        id="passwordInput">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <input type="checkbox" id="showPassword"
+                                                (change)="togglePasswordVisibility()">
+                                        </span>
+                                    </div>
+                                </div>
                                 <span class="form-bar"></span>
                             </div>
+
                             <div class="row mt-3 text-center">
                                 <div class="col-md-12">
                                     <button type="submit" [disabled]="loginForm.invalid"

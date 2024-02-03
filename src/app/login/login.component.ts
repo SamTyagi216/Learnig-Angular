@@ -9,6 +9,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  FormBuilder:any;
+  
   loginForm!: FormGroup;
   error: string = '';
 

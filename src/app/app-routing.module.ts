@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DefaultComponent } from './default/default.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { AddCandidateComponent } from './add-candidate/add-candidate.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'student-list', component: StudentListComponent },
     { path: 'teacher-list', component: TeacherListComponent },
+    { path: 'add-candidate', component: AddCandidateComponent },
 
   ]
 },

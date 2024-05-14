@@ -1,0 +1,50 @@
+<div class="page-area">
+    <h2 class="text-center">Manage User</h2>
+    <div class="container border-top pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Add User</h2>
+                <form #userForm="ngForm" (ngSubmit)="onAddUser(userForm.value)">
+                    <div class="Form-group">
+                        <label for="">User Name</label>
+                        <input type="text" class="form-control" autocomplete="off" name="name" ngModel required>
+
+                    </div>
+                    <div class="Form-group">
+                        <label for="">Technology Use</label>
+                        <input type="text" class="form-control" autocomplete="off" name="techonology" ngModel required>
+
+                    </div>
+                    <button type="submit" class="btn-primary mr-2">Add User</button>
+                    <button type="button" class="btn-warning mr-2">Add User</button>
+
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Ux User</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Technology</th>
+                            <th scope="col" class="text-center">Edit</th>
+                            <th scope="col" class="text-center">delete</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users; index as i">
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.techonology }}</td>
+                            <td class="text-primary"><a class="edit-button"><i class="bi bi-pencil"></i></a></td>
+                            <td><a class="delete-button"><i class="bi bi-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

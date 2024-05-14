@@ -10,15 +10,21 @@ import { ListCandidateComponent } from './component/list-candidate/list-candidat
 import { AddCandidateComponent } from './component/add-candidate/add-candidate.component';
 import { AddUniversityComponent } from './component/add-university/add-university.component';
 import { AddVacancyComponent } from './component/add-vacancy/add-vacancy.component';
+import { Test2Component } from './test2/test2.component';
+import { TestComponent } from './test/test.component';
 
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: 'login', component: LoginComponent },
+  { path: 'test2', component: Test2Component },
+  { path: 'test', component: TestComponent },
+
   {
     path: "", component: DefaultComponent, children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'student-list', component: StudentListComponent },
+
       { path: 'teacher-list', component: TeacherListComponent },
       { path: 'ListUniversity', component: ListUniversityComponent },
       { path: 'ListCandidate', component: ListCandidateComponent },

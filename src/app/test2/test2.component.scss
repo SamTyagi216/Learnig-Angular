@@ -1,0 +1,40 @@
+.container {
+    margin-top: 50px;
+    /* Adjust as needed */
+}
+
+/* Style for form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style for buttons */
+.btn-primary,
+.btn-success,
+.btn-danger {
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+/* Style for table */
+.table {
+    width: 100%;
+}
+
+/* Style for table headers */
+.table thead th {
+    text-align: center;
+}
+
+/* Style for edit and delete buttons */
+.edit-button,
+.delete-button {
+    cursor: pointer;
+}
+
+/* Adjust icon size if needed */
+.edit-button i,
+.delete-button i {
+    font-size: 18px;
+    /* Adjust as needed */
+}

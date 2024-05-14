@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>Prime Number Checker</h2>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" [(ngModel)]="numberToCheck">
+    <button class="btn-success" (click)="checkPrime()">Check</button>
+    <div class="result" *ngIf="result">{{ result }}</div>
+  </div>
+  

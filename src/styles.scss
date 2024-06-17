@@ -1,33 +1,40 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
+// /* You can add global styles to this file, and also import other style files */
+// #mCSB_1_container_wrapper {
+//     height: calc(100vh - 80px) !important;
+//     min-height: 500px !important;
+// }
+
+// #mCSB_1_container {
+//     top: 30px !important;
+// }
+
+// .pcoded-content {
+//     padding-top: 50px;
+// }
+
+// .page-header-breadcrumb .breadcrumb-title {
+//     display: flex;
+// }
+
+// html,
+// body {
+//     height: 100%;
+// }
+
+// body {
+//     margin: 0;
+//     font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* You can add global styles to this file, and also import other style files */
-#mCSB_1_container_wrapper {
-    height: calc(100vh - 80px) !important;
-    min-height: 500px !important;
-}
-
-#mCSB_1_container {
-    top: 30px !important;
-}
-
-.pcoded-content {
-    padding-top: 50px;
-}
-
-.page-header-breadcrumb .breadcrumb-title {
-    display: flex;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+#mCSB_1_container_wrapper{height:calc(100vh - 80px) !important; min-height:500px !important;}
+#mCSB_1_container{top:30px !important;}
+.pcoded-content{padding-top:50px;}
+.page-header-breadcrumb .breadcrumb-title{display:flex;}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

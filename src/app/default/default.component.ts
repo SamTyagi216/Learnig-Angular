@@ -8,7 +8,7 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./default.component.scss']
 })
 export class DefaultComponent implements OnInit {
-  
+
   isSidebar: boolean = false;
 
   constructor(

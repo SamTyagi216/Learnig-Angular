@@ -12,7 +12,7 @@ export class UxServiceService {
 
   saveProducts(products: any) {
     // return this.http.post(this.url,products)
-    return this.http.put(this.url, products)
+    return this.http.post(this.url, products)
 
   }
   fetchProducts() {

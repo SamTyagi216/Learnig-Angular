@@ -17,7 +17,7 @@ import { TestComponent } from './test/test.component';
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: 'login', component: LoginComponent },
-  { path: 'test2', component: Test2Component },
+  { path: 'firebase', component: Test2Component },
   { path: 'test', component: TestComponent },
 
   {

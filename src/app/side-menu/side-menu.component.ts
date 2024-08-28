@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-side-menu',
@@ -11,10 +12,13 @@ export class SideMenuComponent {
 
   domCreated: boolean = false;
 
-  constructor(private rotuer: Router) {
+  constructor(private rotuer: Router, private location: Location) {
 
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 
   setActive(index: number) {
     if (this.activemenu == index) this.activemenu = 0;

@@ -23,7 +23,7 @@ import { ListUniversityComponent } from './component/list-university/list-univer
 import { PrimeFactorComponent } from './prime-factor/prime-factor.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
-import { TableComponent } from './table/table.component';
+import { NaziaModule } from './nazia/nazia.module';
 
 @NgModule({
   declarations: [
@@ -43,8 +43,7 @@ import { TableComponent } from './table/table.component';
     ListUniversityComponent,
     PrimeFactorComponent,
     TestComponent,
-    Test2Component,
-    TableComponent
+    Test2Component
 
   ],
   imports: [
@@ -55,7 +54,8 @@ import { TableComponent } from './table/table.component';
     BrowserAnimationsModule,
     DataTablesModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NaziaModule,
 
 
   ],

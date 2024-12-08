@@ -21,9 +21,7 @@ import { ListCandidateComponent } from './component/list-candidate/list-candidat
 import { ListVacancyComponent } from './component/list-vacancy/list-vacancy.component';
 import { ListUniversityComponent } from './component/list-university/list-university.component';
 import { PrimeFactorComponent } from './prime-factor/prime-factor.component';
-import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
-import { NaziaModule } from './nazia/nazia.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +40,6 @@ import { NaziaModule } from './nazia/nazia.module';
     ListVacancyComponent,
     ListUniversityComponent,
     PrimeFactorComponent,
-    TestComponent,
     Test2Component
 
   ],
@@ -55,7 +52,6 @@ import { NaziaModule } from './nazia/nazia.module';
     DataTablesModule,
     FormsModule,
     ReactiveFormsModule,
-    NaziaModule,
 
 
   ],

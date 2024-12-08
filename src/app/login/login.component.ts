@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -11,69 +11,69 @@ import Swal from 'sweetalert2';
 export class LoginComponent {
   loginForm!: FormGroup;
   error: string = '';
-
-  // Static credentials
+  showPassword: boolean = false;
   staticCredentials = {
-    username: 'sam',
-    password: 'sam'
+    username: 'Karnal',
+    password: 'Karnal'
   };
 
-  constructor(private fb: FormBuilder, private router: Router, private el: ElementRef, private renderer: Renderer2,) { }
+  @ViewChild('passwordInput', { static: false }) passwordInput!: ElementRef<HTMLInputElement>;
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private renderer: Renderer2
+  ) { }
 
   ngOnInit() {
+    this.initializeForm();
+  }
+
+  private initializeForm() {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
   togglePasswordVisibility() {
-    const passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
-    const showPasswordCheckbox = document.getElementById('showPassword') as HTMLInputElement;
-
-    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+    this.showPassword = !this.showPassword;
+    if (this.passwordInput) {
+      const passwordType = this.showPassword ? 'text' : 'password';
+      this.renderer.setAttribute(this.passwordInput.nativeElement, 'type', passwordType);
+    }
   }
 
   loginUser() {
     if (this.loginForm.valid) {
-      const enteredUsername = this.loginForm.get('username')!.value;
-      const enteredPassword = this.loginForm.get('password')!.value;
+      const { username, password } = this.loginForm.value;
 
-      // Check against static credentials
-      if (enteredUsername === this.staticCredentials.username && enteredPassword === this.staticCredentials.password) {
-        // Navigate to the dashboard on successful login
+      if (
+        username === this.staticCredentials.username &&
+        password === this.staticCredentials.password
+      ) {
         this.router.navigate(['/dashboard']);
-        console.log("sam : ", this.loginForm.value)
         Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Successful login, now you are moving to dashhboard",
+          position: 'top-end',
+          icon: 'success',
+          title: 'Successful login! Redirecting to dashboard...',
           showConfirmButton: false,
-          timer: 300
+          timer: 2000,
         });
       } else {
-        this.error = 'Invalid username or password';
-        Swal.fire({
-          icon: "error",
-          title: "Error...",
-          text: "Invalid username or password!",
-          //footer: '<a href="#">Why do I have this issue?</a>'
-        });
+        this.showError('Invalid username or password.');
       }
-    }
-  }
-  
-  onClick() {
-    const passwordInput = this.el.nativeElement.querySelector('#password');
-    const passwordToggle = this.el.nativeElement.querySelector('#password-toggle');
-
-    if (passwordInput.type === 'password') {
-      passwordInput.type = 'text';
-      this.renderer.addClass(passwordToggle, 'fa-eye-slash');
     } else {
-      passwordInput.type = 'password';
-      this.renderer.removeClass(passwordToggle, 'fa-eye-slash');
+      this.showError('Please fill in all required fields.');
     }
   }
 
+  private showError(message: string) {
+    this.error = message;
+    Swal.fire({
+      icon: 'error',
+      title: 'Login Failed',
+      text: message,
+    });
+  }
 }

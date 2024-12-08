@@ -1,6 +1,7 @@
 <div class="login-container py-4 m-4">
     <div class="container">
         <div class="row">
+            <!-- Login Form Section -->
             <div class="col-lg-6 col-xs-12">
                 <div class="login-form-box">
                     <div class="login-text">
@@ -10,65 +11,56 @@
                     <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
                         <!-- Username Field -->
                         <div class="form-group">
-                            <label for="email">Username*</label>
-                            <input 
-                                type="email" 
-                                formControlName="username" 
-                                id="email" 
-                                class="form-control"
-                                placeholder="Email Address *" 
-                                [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }"
-                            />
-                            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="invalid-feedback">
-                                <small *ngIf="loginForm.get('username')?.errors?.['required']">Username is required.</small>
-                                <small *ngIf="loginForm.get('username')?.errors?.['email']">Please enter a valid email address.</small>
+                            <label for="username">Username*</label>
+                            <input type="email" formControlName="username" id="username" class="form-control"
+                                placeholder="Email Address *"
+                                [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }" />
+                            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+                                class="invalid-feedback">
+                                <small *ngIf="loginForm.get('username')?.errors?.['required']">Username is
+                                    required.</small>
+                                <small *ngIf="loginForm.get('username')?.errors?.['email']">Please enter a valid email
+                                    address.</small>
                             </div>
-                        </div>
-
-                        <!-- Password Field -->
+                        </div> 
                         <div class="form-group">
                             <label for="password">Password*</label>
-                            <div class="password-input">
-                                <input 
-                                    type="password" 
-                                    formControlName="password" 
-                                    id="password" 
-                                    class="form-control"
-                                    placeholder="Password *" 
-                                    [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }"
-                                />
-                                <span class="password-toggle" (click)="onClick()">
-                                    <i id="password-toggle" class="fa fa-eye"></i>
+                            <div class="password-input position-relative">
+                                <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
+                                    id="password" class="form-control" placeholder="Password *"
+                                    [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }" />
+                                <span class="password-toggle" (click)="togglePasswordVisibility()"
+                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                                    <i [ngClass]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
                                 </span>
                             </div>
-                            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback">
-                                <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</small>
-                                <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</small>
+                            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                                class="invalid-feedback">
+                                <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is
+                                    required.</small>
+                                <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at
+                                    least 6 characters.</small>
                             </div>
-                        </div>
-
-                        <!-- Submit Button -->
+                        </div> 
                         <div class="form-group">
                             <button type="submit" id="loginbtn" class="btn btn-block btn-info"
                                 [disabled]="loginForm.invalid">
-                                Login <i class="pi pi-spin pi-spinner"></i>
+                                Login
                             </button>
                         </div>
                     </form>
                     <footer class="login-footer">
                         <hr>
                         <div class="error-message">
-                            <!-- <h6>{{errorMsg}}</h6> -->
+                            <small *ngIf="error" class="text-danger">{{ error }}</small>
                         </div>
                         <p>
                             <strong>Powered by</strong>
-                            <a href="#">
-                                <img src="/assets/images/logo copy.png" alt="Logo" class="footer-logo">
-                            </a>
+                            <a href="#">Your Company</a>
                         </p>
                     </footer>
                 </div>
-            </div>
+            </div> 
             <div class="col-md-6 col-xs-12">
                 <div class="login-banner">
                     <img src="assets/images/coding2.gif" alt="Coding Animation">

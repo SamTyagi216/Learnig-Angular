@@ -5,33 +5,37 @@
             <div class="col-lg-6 col-xs-12">
                 <div class="login-form-box">
                     <div class="login-text">
-                        <h2>Hey there, please sign in</h2>
-                        <p>Login with the data you entered during your registration.</p>
+                        <h2>Welcome Back!</h2>
+                        <p>Please login to your account.</p>
                     </div>
                     <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
                         <!-- Username Field -->
                         <div class="form-group">
-                            <label for="username">Username*</label>
+                            <label for="username">Email Address*</label>
                             <input type="email" formControlName="username" id="username" class="form-control"
-                                placeholder="Email Address *"
-                                [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }" />
+                                placeholder="Enter your email" [ngClass]="{
+                    'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched
+                  }" aria-label="Email Address" />
                             <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
                                 class="invalid-feedback">
-                                <small *ngIf="loginForm.get('username')?.errors?.['required']">Username is
+                                <small *ngIf="loginForm.get('username')?.errors?.['required']">Email is
                                     required.</small>
-                                <small *ngIf="loginForm.get('username')?.errors?.['email']">Please enter a valid email
-                                    address.</small>
+                                <small *ngIf="loginForm.get('username')?.errors?.['email']">Invalid email
+                                    format.</small>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- Password Field -->
                         <div class="form-group">
                             <label for="password">Password*</label>
                             <div class="password-input position-relative">
                                 <input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"
-                                    id="password" class="form-control" placeholder="Password *"
-                                    [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }" />
+                                    id="password" class="form-control" placeholder="Enter your password" [ngClass]="{
+                      'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched
+                    }" aria-label="Password" />
                                 <span class="password-toggle" (click)="togglePasswordVisibility()"
                                     style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
-                                    <i [ngClass]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                                    <i [ngClass]="showPassword ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                                        aria-hidden="true"></i>
                                 </span>
                             </div>
                             <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
@@ -39,9 +43,10 @@
                                 <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is
                                     required.</small>
                                 <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at
-                                    least 6 characters.</small>
+                                    least 6 characters long.</small>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- Submit Button -->
                         <div class="form-group">
                             <button type="submit" id="loginbtn" class="btn btn-block btn-info"
                                 [disabled]="loginForm.invalid">
@@ -50,20 +55,21 @@
                         </div>
                     </form>
                     <footer class="login-footer">
-                        <hr>
+                        <hr />
                         <div class="error-message">
                             <small *ngIf="error" class="text-danger">{{ error }}</small>
                         </div>
                         <p>
                             <strong>Powered by</strong>
-                            <a href="#">Your Company</a>
+                            <!-- <a href="#">Your Company</a> -->
                         </p>
                     </footer>
                 </div>
-            </div> 
+            </div>
+            <!-- Banner Section -->
             <div class="col-md-6 col-xs-12">
                 <div class="login-banner">
-                    <img src="assets/images/coding2.gif" alt="Coding Animation">
+                    <img src="assets/images/coding2.gif" alt="Coding Animation" />
                 </div>
             </div>
         </div>

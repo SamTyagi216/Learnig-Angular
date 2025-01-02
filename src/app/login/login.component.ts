@@ -12,12 +12,12 @@ export class LoginComponent {
   loginForm!: FormGroup;
   error: string = '';
   showPassword: boolean = false;
-  staticCredentials = {
-    username: 'Karnal',
-    password: 'Karnal'
-  };
 
-  @ViewChild('passwordInput', { static: false }) passwordInput!: ElementRef<HTMLInputElement>;
+  // Hardcoded credentials for demo purposes
+  staticCredentials = {
+    username: 'admin@example.com',
+    password: 'admin123'
+  };
 
   constructor(
     private fb: FormBuilder,
@@ -38,21 +38,20 @@ export class LoginComponent {
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
-    if (this.passwordInput) {
-      const passwordType = this.showPassword ? 'text' : 'password';
-      this.renderer.setAttribute(this.passwordInput.nativeElement, 'type', passwordType);
-    }
   }
 
   loginUser() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
 
+      // Debug logs for form values
+      console.log('Username:', username);
+      console.log('Password:', password);
+
       if (
         username === this.staticCredentials.username &&
         password === this.staticCredentials.password
       ) {
-        this.router.navigate(['/dashboard']);
         Swal.fire({
           position: 'top-end',
           icon: 'success',
@@ -60,6 +59,7 @@ export class LoginComponent {
           showConfirmButton: false,
           timer: 2000,
         });
+        this.router.navigate(['/dashboard']);
       } else {
         this.showError('Invalid username or password.');
       }
